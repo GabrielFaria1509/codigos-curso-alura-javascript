@@ -1,11 +1,20 @@
 alert("Boas vindas ao jogo do número secreto");     //passa uma mensagem  //alert para mostrar uma mensagem ao usuário sem esperar uma resposta
-let numeroSecreto = 10;                               //deixa um espaço na memória pra armazenar uma variável
+
+let numeroSecreto = 4;                               //deixa um espaço na memória pra armazenar uma variável
+
 console.log(numeroSecreto);                         //console é uma ferramenta para desenvolvedores , não para usuários
+
 let chute = prompt("Escolha um número entre 1 e 10");              //dá uma mensagem aoa abir a aba do navegador  //uso prompt quando quero solicitar uma entrada de dados
 
+console.log("Valor do chute : ",chute);        //verifica valor do chute //logo posso usar vírgula pra juntar texto e variável
+
+console.log("Resultado da comparação : ",chute==numeroSecreto);
 if(chute == numeroSecreto){
+    
+    
     alert(`Isso aí ! Você descobriu o número secreto  ${numeroSecreto}`);  //junção de variável mais texto em javascript é por ${} e textro entre crases
 }
 else{
-    alert("Você errou :(")
+    console.log("Verificar valor do número secreto em caso do player errar",numeroSecreto);
+    alert("Você errou :(");
 }   
