@@ -1,4 +1,4 @@
-alert("Boas vindas ao jogo do números secreto");     //passa uma mensagem  //alert para mostrar uma mensagem ao usuário sem esperar uma resposta
+alert("Boas vindas ao jogo do número secreto");     //passa uma mensagem  //alert para mostrar uma mensagem ao usuário sem esperar uma resposta
 let numeroSecreto = 10;                               //deixa um espaço na memória pra armazenar uma variável
 console.log(numeroSecreto);                         //console é uma ferramenta para desenvolvedores , não para usuários
 let chute = prompt("Escolha um número entre 1 e 10");              //dá uma mensagem aoa abir a aba do navegador  //uso prompt quando quero solicitar uma entrada de dados
