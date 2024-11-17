@@ -1,42 +1,25 @@
-alert("Boas vindas ao jogo do número secreto");     //passa uma mensagem  //alert para mostrar uma mensagem ao usuário sem esperar uma resposta
+alert('Boas vindas ao jogo do número secreto');
+let numeroSecreto = parseInt(Math.random() * 10 + 1);  //math.random gere entre 1 e 10 //parse int pega parte inteira
+console.log(numeroSecreto)
+let chute;
+let tentativas = 1;
 
-let numeroSecreto = 4;                               //deixa um espaço na memória pra armazenar uma variável
-
-console.log(numeroSecreto);                         //console é uma ferramenta para desenvolvedores , não para usuários
-
-let chute;          //deixo espaçi na memória reservado
-
-chute = prompt("Escolha um número entre 1 e 10");   //dá uma mensagem aoa abir a aba do navegador  //uso prompt quando quero solicitar uma entrada de dados
-
-let tentativa = 0;
-while(chute != numeroSecreto){
-     
-console.log("Valor do chute : ",chute);        //verifica valor do chute //logo posso usar vírgula pra juntar texto e variável
-
-console.log("Resultado da comparação : ",chute==numeroSecreto);
-
-    if(chute < numeroSecreto){
-        alert(`O numero secreto é maior que ${chute}`);
-        console.log("Verificar valor do número secreto em caso do player errar",numeroSecreto);
+// enquanto chute não for igual ao n.s.
+while (chute != numeroSecreto) {
+    chute = prompt('Escolha um número entre 1 e 10');
+    // se chute for igual ao número secreto
+    if (chute == numeroSecreto) {
+       break;
+    } else {
+        if (chute > numeroSecreto) {
+            alert(`O número secreto é menor que ${chute}`)
+        } else {
+            alert(`O número secreto é maior que ${chute}`)
+        }
+        // tentativas = tentativas + 1
+        tentativas++
     }
-    else{
-        alert(`O numero secreto é menor que ${chute}`);
-        console.log("Verificar valor do número secreto em caso do player errar",numeroSecreto);
-
-    }
-    
-    alert("Você errou :(");
-
-    chute = prompt("Escolha um número entre 1 e 10");
-    tentativa++;
-}
-if(chute == numeroSecreto){
-    alert("Isso aí ! Você acertou o número secreto !");
-    alert(`Número de tentativas : ${tentativa + 1} `);
-    
 }
 
- 
-
-
- 
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'   //operador ternário
+alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}`);
