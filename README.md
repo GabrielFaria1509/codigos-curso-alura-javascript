@@ -28,8 +28,7 @@ O desenvolvimento deste código foi fundamental para consolidar os seguintes pil
 ## 📂 Estrutura de Arquivos
 
 O projeto está organizado na estrutura padrão de scripts isolados:
-```text
-├── Códigos/              
-│   ├── index.html       # Página base que executa o script no navegador
-│   └── main.js          # Arquivo JavaScript contendo toda a lógica do jogo
-└── README.md            # Documentação principal do repositório
+```text             
+── index.html       # Página base que executa o script no navegador
+── projeto1.js          # Arquivo JavaScript contendo toda a lógica do jogo
+── README.md            # Documentação principal do repositório
